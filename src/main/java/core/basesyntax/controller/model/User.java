@@ -6,6 +6,10 @@ public class User {
     private String userName;
     private List<Bet> bets;
 
+    public User(String userName) {
+        this.userName = userName;
+    }
+
     public User(String name, List<Bet> bets) {
         this.userName = name;
         this.bets = bets;
