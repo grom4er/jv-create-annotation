@@ -24,7 +24,7 @@ public class ConsoleHandler {
             } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
                 System.out.println("Enter please, valid data");
             }
-            if(bet != null){
+            if (bet != null) {
                 betDao.add(bet);
                 System.out.println(bet);
             }
