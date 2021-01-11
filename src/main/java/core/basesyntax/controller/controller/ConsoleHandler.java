@@ -6,11 +6,14 @@ import core.basesyntax.controller.dao.UserDao;
 import core.basesyntax.controller.dao.UserDaoImpl;
 import core.basesyntax.controller.model.Bet;
 import core.basesyntax.controller.model.User;
+import core.basesyntax.lib.Inject;
 import java.util.Scanner;
 
 public class ConsoleHandler {
-    private static final String NAME_PATTERN = "[A-z]{2,}";
+    private static final String NAME_PATTERN = "[A-z]{3,}";
+    @Inject
     private final BetDao betDao = new BetDaoImpl();
+    @Inject
     private final UserDao userDao = new UserDaoImpl();
 
     public void handle() {
@@ -49,7 +52,7 @@ public class ConsoleHandler {
             if (name.equalsIgnoreCase("q")) {
                 return;
             }
-            if (name.isEmpty() || name.matches(NAME_PATTERN)) {
+            if (name.isEmpty() || !name.matches(NAME_PATTERN)) {
                 System.out.println("Please, enter a valid data");
                 continue;
             }

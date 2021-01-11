@@ -2,8 +2,10 @@ package core.basesyntax.controller.dao;
 
 import core.basesyntax.controller.db.StorageBets;
 import core.basesyntax.controller.model.Bet;
-import java.util.List;
+import core.basesyntax.lib.Dao;
 
+import java.util.List;
+@Dao
 public class BetDaoImpl implements BetDao {
     @Override
     public void add(Bet bet) {
