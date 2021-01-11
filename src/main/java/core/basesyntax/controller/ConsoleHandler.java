@@ -12,9 +12,9 @@ import java.util.Scanner;
 public class ConsoleHandler {
     private static final String NAME_PATTERN = "(?)[A-Z]([a-z]{3,})";
     @Inject
-    private final BetDao betDao = new BetDaoImpl();
+    private BetDao betDao;
     @Inject
-    private final UserDao userDao = new UserDaoImpl();
+    private UserDao userDao;
 
     public void handle() {
         Scanner scanner = new Scanner(System.in);
