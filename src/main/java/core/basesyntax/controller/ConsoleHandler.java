@@ -1,17 +1,18 @@
-package core.basesyntax.controller.controller;
+package core.basesyntax.controller;
 
-import core.basesyntax.controller.dao.BetDao;
-import core.basesyntax.controller.dao.BetDaoImpl;
-import core.basesyntax.controller.dao.UserDao;
-import core.basesyntax.controller.dao.UserDaoImpl;
-import core.basesyntax.controller.model.Bet;
-import core.basesyntax.controller.model.User;
+import core.basesyntax.dao.BetDao;
+import core.basesyntax.dao.UserDao;
+import core.basesyntax.lib.Inject;
+import core.basesyntax.model.Bet;
+import core.basesyntax.model.User;
 import java.util.Scanner;
 
 public class ConsoleHandler {
-    private static final String NAME_PATTERN = "[A-z]{2,}";
-    private final BetDao betDao = new BetDaoImpl();
-    private final UserDao userDao = new UserDaoImpl();
+    private static final String NAME_PATTERN = "(?)[A-Z]([a-z]{3,})";
+    @Inject
+    private BetDao betDao;
+    @Inject
+    private UserDao userDao;
 
     public void handle() {
         Scanner scanner = new Scanner(System.in);
@@ -49,7 +50,7 @@ public class ConsoleHandler {
             if (name.equalsIgnoreCase("q")) {
                 return;
             }
-            if (name.isEmpty() || name.matches(NAME_PATTERN)) {
+            if (name.isEmpty() || !name.matches(NAME_PATTERN)) {
                 System.out.println("Please, enter a valid data");
                 continue;
             }

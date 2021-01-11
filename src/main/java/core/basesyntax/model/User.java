@@ -1,4 +1,4 @@
-package core.basesyntax.controller.model;
+package core.basesyntax.model;
 
 import java.util.List;
 

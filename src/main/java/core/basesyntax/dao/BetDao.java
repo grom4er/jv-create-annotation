@@ -1,6 +1,6 @@
-package core.basesyntax.controller.dao;
+package core.basesyntax.dao;
 
-import core.basesyntax.controller.model.Bet;
+import core.basesyntax.model.Bet;
 import java.util.List;
 
 public interface BetDao {
