@@ -1,6 +1,6 @@
-package core.basesyntax.controller.dao;
+package core.basesyntax.dao;
 
-import core.basesyntax.controller.model.User;
+import core.basesyntax.model.User;
 import java.util.List;
 
 public interface UserDao {

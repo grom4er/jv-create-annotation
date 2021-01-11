@@ -1,9 +1,9 @@
-package core.basesyntax.controller.factory;
+package core.basesyntax.factory;
 
-import core.basesyntax.controller.dao.BetDao;
-import core.basesyntax.controller.dao.BetDaoImpl;
-import core.basesyntax.controller.dao.UserDao;
-import core.basesyntax.controller.dao.UserDaoImpl;
+import core.basesyntax.dao.BetDao;
+import core.basesyntax.dao.BetDaoImpl;
+import core.basesyntax.dao.UserDao;
+import core.basesyntax.dao.UserDaoImpl;
 
 public class Factory {
     private static BetDao betDao;

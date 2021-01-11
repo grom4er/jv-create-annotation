@@ -1,6 +1,6 @@
-package core.basesyntax.controller.db;
+package core.basesyntax.db;
 
-import core.basesyntax.controller.model.Bet;
+import core.basesyntax.model.Bet;
 import java.util.ArrayList;
 import java.util.List;
 

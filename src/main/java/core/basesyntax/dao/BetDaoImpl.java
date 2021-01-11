@@ -1,10 +1,10 @@
-package core.basesyntax.controller.dao;
+package core.basesyntax.dao;
 
-import core.basesyntax.controller.db.StorageBets;
-import core.basesyntax.controller.model.Bet;
+import core.basesyntax.db.StorageBets;
 import core.basesyntax.lib.Dao;
-
+import core.basesyntax.model.Bet;
 import java.util.List;
+
 @Dao
 public class BetDaoImpl implements BetDao {
     @Override

@@ -1,16 +1,16 @@
-package core.basesyntax.controller.controller;
+package core.basesyntax.controller;
 
-import core.basesyntax.controller.dao.BetDao;
-import core.basesyntax.controller.dao.BetDaoImpl;
-import core.basesyntax.controller.dao.UserDao;
-import core.basesyntax.controller.dao.UserDaoImpl;
-import core.basesyntax.controller.model.Bet;
-import core.basesyntax.controller.model.User;
+import core.basesyntax.dao.BetDao;
+import core.basesyntax.dao.BetDaoImpl;
+import core.basesyntax.dao.UserDao;
+import core.basesyntax.dao.UserDaoImpl;
 import core.basesyntax.lib.Inject;
+import core.basesyntax.model.Bet;
+import core.basesyntax.model.User;
 import java.util.Scanner;
 
 public class ConsoleHandler {
-    private static final String NAME_PATTERN = "[A-z]{3,}";
+    private static final String NAME_PATTERN = "(?)[A-Z]([a-z]{3,})";
     @Inject
     private final BetDao betDao = new BetDaoImpl();
     @Inject

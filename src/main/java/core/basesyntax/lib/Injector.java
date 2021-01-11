@@ -1,9 +1,9 @@
 package core.basesyntax.lib;
 
-import core.basesyntax.controller.dao.BetDao;
-import core.basesyntax.controller.dao.UserDao;
-import core.basesyntax.controller.factory.Factory;
-import exception.NotHaveAnnotation;
+import core.basesyntax.dao.BetDao;
+import core.basesyntax.dao.UserDao;
+import core.basesyntax.exception.NotHaveAnnotation;
+import core.basesyntax.factory.Factory;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -26,7 +26,7 @@ public class Injector {
                 if (objectDao.getClass().isAnnotationPresent(Dao.class)) {
                     field.set(instance, objectDao);
                 } else {
-                    throw new NotHaveAnnotation("Annotation @Dao doesn't exist in class "
+                    throw new NotHaveAnnotation("Annotation @Dao doesn't have in class "
                             + objectDao.getClass());
                 }
             }

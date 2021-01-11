@@ -1,4 +1,4 @@
-package core.basesyntax.controller.model;
+package core.basesyntax.model;
 
 public class Bet {
     private int value;
